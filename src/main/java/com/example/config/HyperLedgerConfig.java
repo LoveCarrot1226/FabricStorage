@@ -7,6 +7,10 @@ import org.hyperledger.fabric.gateway.*;
 import org.hyperledger.fabric.gateway.Identities;
 import org.hyperledger.fabric.gateway.Wallet;
 import org.hyperledger.fabric.gateway.Wallets;
+import org.hyperledger.fabric.protos.idemix.Idemix;
+import org.hyperledger.fabric.sdk.Enrollment;
+import org.hyperledger.fabric.sdk.identity.IdemixEnrollment;
+import org.hyperledger.fabric_ca.sdk.HFCAClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,6 +20,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.PrivateKey;
 import java.security.cert.X509Certificate;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 @Configuration
@@ -48,7 +53,20 @@ public class HyperLedgerConfig {
 
 
         log.info("=========================================== connected fabric gateway {} " , gateway);
+        //Idemix idemix;
+        HFCAClient hfcaClient=HFCAClient.createNewInstance("",new Properties());
+        Enrollment x509enrollment=new Enrollment() {
+            @Override
+            public PrivateKey getKey() {
+                return null;
+            }
 
+            @Override
+            public String getCert() {
+                return null;
+            }
+        };
+        IdemixEnrollment idemixEnrollment = (IdemixEnrollment)hfcaClient.idemixEnroll(x509enrollment, "idemixMSPID1");
         return gateway;
     }
 

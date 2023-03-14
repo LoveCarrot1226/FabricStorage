@@ -28,11 +28,23 @@
             <scope>test</scope>
         </dependency>
 
+        <!--<dependency>
+            <groupId>org.hyperledger.fabric-sdk-java</groupId>
+            <artifactId>fabric-sdk-java</artifactId>
+            <version>1.4.7</version>
+        </dependency>-->
+
         <dependency>
             <groupId>org.hyperledger.fabric</groupId>
             <artifactId>fabric-gateway-java</artifactId>
             <version>2.2.0</version>
         </dependency>
+
+        <!--<dependency>
+            <groupId>org.hyperledger.fabric-chaincode-java</groupId>
+            <artifactId>fabric-chaincode-shim</artifactId>
+            <version>2.0.0</version>
+        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -50,6 +62,11 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

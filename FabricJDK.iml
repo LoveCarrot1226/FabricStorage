@@ -82,7 +82,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.3.25" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.9.1" level="project" />
     <orderEntry type="library" name="Maven: org.hyperledger.fabric:fabric-gateway-java:2.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.hyperledger.fabric-sdk-java:fabric-sdk-java:2.2.20" level="project" />
+    <orderEntry type="library" name="Maven: org.hyperledger.fabric-sdk-java:fabric-sdk-java:2.2.21" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-tcnative-boringssl-static:2.0.56.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-tcnative-classes:2.0.56.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-tcnative-boringssl-static:linux-x86_64:2.0.56.Final" level="project" />
@@ -165,5 +165,7 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.4" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
   </component>
 </module>

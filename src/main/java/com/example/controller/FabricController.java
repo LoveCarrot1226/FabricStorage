@@ -1,6 +1,7 @@
 package com.example.controller;
 
 
+import ch.qos.logback.core.status.Status;
 import com.example.domain.Asset;
 import com.google.common.collect.Maps;
 import lombok.AllArgsConstructor;
@@ -86,7 +87,7 @@ public class FabricController {
     @GetMapping("/{assetID}")
     public String ReadAsset(@PathVariable String assetID) throws ContractException, InterruptedException, TimeoutException {
         Contract contract = getContract();
-        byte[] asset = contract.submitTransaction("ReadAsset", assetID);
+        byte[] asset = contract.evaluateTransaction("ReadAsset", assetID);
 
         return "*** Transaction committed successfully, ReadAssets: " + StringUtils.newStringUtf8(asset);
     }
@@ -95,7 +96,7 @@ public class FabricController {
     public String TransferAsset(@PathVariable String assetID, @RequestBody String newOwner) throws ContractException, InterruptedException, TimeoutException {
         Contract contract = getContract();
         byte[] asset = contract.submitTransaction("TransferAsset", assetID, newOwner);
-        
+
         return "*** Transaction committed successfully, Transfer "+assetID+" to " + newOwner;
     }
 }
