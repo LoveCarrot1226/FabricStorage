@@ -1,0 +1,26 @@
+package com.example.config;
+
+import org.hyperledger.fabric.sdk.security.CryptoSuite;
+import org.hyperledger.fabric_ca.sdk.HFCAClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.util.Properties;
+
+
+@Configuration
+public class FabricCAConfiguration {
+
+    @Bean
+    public HFCAClient hfcaClient() throws Exception {
+        Properties properties = new Properties();
+
+        properties.setProperty("allowAllHostNames", "true");
+        properties.setProperty("pemFile" , "F:\\JavaCode\\FabricJDK\\src\\main\\resources\\crypto-config\\peerOrganizations\\org1.example.com\\ca\\ca.org1.example.com-cert.pem");
+
+        HFCAClient hfcaClient = HFCAClient.createNewInstance("org1-int-ca", "https://10.1.0.154:7054", properties);
+        hfcaClient.setCryptoSuite(CryptoSuite.Factory.getCryptoSuite());
+
+        return hfcaClient;
+    }
+}

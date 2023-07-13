@@ -13,12 +13,27 @@
       "sourceType": "com.example.config.HyperLedgerFabricProperties"
     },
     {
+      "name": "fabric.channel",
+      "type": "java.lang.String",
+      "sourceType": "com.example.config.HyperLedgerFabricProperties"
+    },
+    {
+      "name": "fabric.msp-id",
+      "type": "java.lang.String",
+      "sourceType": "com.example.config.HyperLedgerFabricProperties"
+    },
+    {
       "name": "fabric.network-connection-config-path",
       "type": "java.lang.String",
       "sourceType": "com.example.config.HyperLedgerFabricProperties"
     },
     {
       "name": "fabric.private-key-path",
+      "type": "java.lang.String",
+      "sourceType": "com.example.config.HyperLedgerFabricProperties"
+    },
+    {
+      "name": "fabric.tls-cert-path",
       "type": "java.lang.String",
       "sourceType": "com.example.config.HyperLedgerFabricProperties"
     }

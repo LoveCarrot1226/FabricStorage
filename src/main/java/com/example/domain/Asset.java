@@ -1,16 +1,20 @@
 package com.example.domain;
 
 
-import java.util.Objects;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
+
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Asset {
+@Accessors(chain = true)
+public class Asset implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private String assetID;
 
